@@ -6,6 +6,7 @@ const child_process = require("child_process")
 
 /* GET users listing. */
 router.post('/', function (req, res, next) {
+    console.log("接收到文件请求")
     let {data, color} = req.body
     let time=Date.now()
     let imgName = time + ".png"
