@@ -13,7 +13,7 @@ const fs=require("fs")
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '443');
+var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
 /**
@@ -24,7 +24,7 @@ const httpsOption={
   cert:fs.readFileSync("ssl/startpendulum.site_bundle.crt")
 }
 const server = https.createServer(httpsOption,app);
-
+// const server=http.createServer(app)
 /**
  * Listen on provided port, on all network interfaces.
  */

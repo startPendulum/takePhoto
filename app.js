@@ -6,10 +6,8 @@ const bodyParser=require("body-parser")
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-//路由
 var indexRouter = require('./routes/index');
 var imgRouter = require('./routes/img');
-const timeRouter = require("./routes/time");
 
 var app = express();
 app.use(cors())
@@ -24,10 +22,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-//应用路由
 app.use('/', indexRouter);
 app.use('/img', imgRouter);
-app.use("/time",timeRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
