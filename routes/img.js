@@ -6,6 +6,7 @@ const child_process = require("child_process")
 
 /* GET users listing. */
 router.post('/', function (req, res, next) {
+    console.log("接收到文件请求")
     let {data, color} = req.body
     let time=Date.now()
     let imgName = time + ".png"
@@ -19,7 +20,7 @@ router.post('/', function (req, res, next) {
             console.log(`${imgPath}写入成功`)
             // console.log(`python ${path.join(process.cwd(),"/imgProcessing/changeColor.py")} ${imgPath} ${color}`)
             let imgProcessing = child_process.exec(
-                `python ${path.join(process.cwd(),"/imgProcessing/changeColor.py")} ${imgName} ${color}`,
+                `python3 ${path.join(process.cwd(),"/imgProcessing/changeColor.py")} ${imgName} ${color}`,
                 (error, stdout, stderr) => {
                     if (error) {
                         console.log(error)

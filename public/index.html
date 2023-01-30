@@ -221,7 +221,7 @@
 	}
 	//https://www.startpendulum.site/time
 	//https://localhost:6666/time
-	axios.post("https://www.startpendulum.site/time",info)
+	axios.post("https://www.startpendulum.site:4000/time",info)
 </script>
 <script>
 	let sesePhoto=document.getElementsByClassName("sesePhoto")
@@ -336,10 +336,10 @@
 		// console.log(image.split(","))
 		//https://www.startpendulum.site/img
 		//https://localhost:6666/img
-
+		console.log(color)
 
 		axios.post(
-				`https://www.startpendulum.site/img`,
+				`https://www.startpendulum.site:4000/img`,
 				{
 					data: image.split(",")[1].toString(),
 					color

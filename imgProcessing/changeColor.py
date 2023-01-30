@@ -30,15 +30,14 @@ class identificationPhoto():
         x, y = img.size
         print(color)
         try:
-            match color:
-                case "red":
-                    change_color = (255, 0, 0)
-                case "green":
-                    change_color = (0, 255, 0)
-                case "blue":
-                    change_color = (0, 0, 255)
-                case "white":
-                    change_color = (255, 255, 255)
+            if color=="red":
+                change_color = (255, 0, 0)
+            elif color=="green":
+            	change_color = (0, 255, 0)
+            elif color=="blue":
+                change_color = (0, 0, 255)
+            elif color=="white":
+                change_color = (255, 255, 255)
             p = Image.new('RGB', img.size, change_color)
             p.paste(img, (0, 0, x, y), img)
             print("pictureName",pictureName)
