@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -361,3 +362,368 @@
 </script>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/textColor.css">
+</head>
+<body class="bg-dark">
+	<section class="p-3">
+		<div class="sese">
+
+			<div class="text-center">
+				<h5 class="seseTitle">每日涩涩</h5>
+				<p class="seseP">Learn SeSe EverDay</p>
+			</div>
+
+			<div
+					id="carouselExampleIndicators"
+					class="carousel slide"
+					data-bs-ride="carousel"
+			>
+				<ol class="carousel-indicators">
+					<li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="bg-dark active"></li>
+					<li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="bg-dark"></li>
+					<li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" class="bg-dark"></li>
+					<li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" class="bg-dark"></li>
+					<li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" class="bg-dark"></li>
+				</ol>
+				<div class="carousel-inner" >
+					<div class="carousel-item text-center active seseContainer">
+						<img src="" class="sesePhoto img-fluid" alt="..." style="height: 100%;">
+					</div>
+					<div class="carousel-item seseContainer text-center">
+						<img src="" class="sesePhoto img-fluid" alt="..." style="height: 100%;">
+					</div>
+					<div class="carousel-item seseContainer text-center">
+						<img src="" class="sesePhoto img-fluid" alt="..." style="height: 100%;">
+					</div>
+					<div class="carousel-item seseContainer text-center">
+						<img src="" class="sesePhoto img-fluid" alt="..." style="height: 100%;">
+					</div>
+					<div class="carousel-item seseContainer text-center">
+						<img src="" class="sesePhoto img-fluid" alt="..." style="height: 100%;">
+					</div>
+				</div>
+				<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Previous</span>
+				</a>
+				<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Next</span>
+				</a>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="p-5 mt-lg-3">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-5 gx-5 p-3 text-center">
+					<h5 class="text-danger lead">实时摄像头</h5>
+					<video class="img-fluid"></video>
+				</div>
+				<div class="d-grid col-md-2 my-auto p-1">
+					<div class="row py-4 px-2">
+						<div class="d-grid col">
+							<button type="button" class="btn btn-primary btn-lg" onclick="takePhoto()">拍 照</button>
+						</div>
+					</div>
+					<div class="row p-2">
+						<div class="d-grid col">
+							<input type="radio" class="btn-check " name="color" id="red" autocomplete="off" value="red"
+							       checked>
+							<label class="btn btn-outline-danger" for="red">红色底</label>
+						</div>
+						<div class="d-grid col">
+							<input type="radio" class="btn-check" name="color" id="green" autocomplete="off" value="green">
+							<label class="btn btn-outline-success" for="green">绿色底</label>
+						</div>
+					</div>
+					<div class="row p-2">
+						<div class="d-grid col">
+							<input type="radio" class="btn-check" name="color" id="blue" autocomplete="off" value="blue">
+							<label class="btn btn-outline-primary" for="blue">蓝色底</label>
+						</div>
+						<div class="d-grid col">
+							<input type="radio" class="btn-check" name="color" id="white" autocomplete="off" value="white">
+							<label class="btn btn-outline-light" for="white">白色底</label>
+						</div>
+					</div>
+					<div class="row py-4 px-2">
+						<div class="d-grid col">
+							<button
+									type="button"
+									class="btn btn-warning btn-lg text-light"
+									id="submit"
+									data-bs-toggle="modal"
+									data-bs-target="#exampleModal"
+							>
+								提 交
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-5 text-center p-3">
+					<h5 class="text-danger text-center lead">照片</h5>
+					<img src="" class="img-fluid photo">
+					<canvas width="1000" height="1000" class="img-fluid w-auto bg-gradient"></canvas>
+				</div>
+			</div>
+			<div class="modal fade" id="exampleModal">
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title">确定吗</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="modal-body">
+							<h5>确定要使用这张图片吗？这API十分滴珍贵!</h5>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+							<button type="button" class="btn btn-primary" onclick="submit()" data-bs-dismiss="modal">确定</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="waiting">
+		<div class="card"  style="width: 25rem;">
+			<img src="img/sese1.jpg" class="card-img-top sese img-fluid w-auto" alt="这里有图片">
+			<div class="card-body">
+				<p class="card-text text-center">处理中请稍后</p>
+			</div>
+		</div>
+	</div>
+
+
+<style>
+	.waiting{
+		height: 100%;
+		width: 100%;
+		display: none;
+		background-color: rgba(13,202,240,0.8);
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	@media screen and (max-width: 576px){
+		.seseContainer{
+			height: 300px;
+			/*width: 500px;*/
+		}
+
+	}
+	@media screen and (min-width: 576px ) and (max-width: 768px) {
+		.seseContainer{
+			height: 400px;
+			/*width: 500px;*/
+		}
+
+	}
+	@media screen and (min-width: 768px ) and (max-width: 992px) {
+		.seseContainer{
+			height: 500px;
+			/*width: 500px;*/
+		}
+
+	}
+	@media screen and (min-width: 992px ) and (max-width: 1200px) {
+		.seseContainer{
+			height: 600px;
+			/*width: 500px;*/
+		}
+
+	}
+	@media screen and (min-width: 1200px ) and (max-width: 1400px) {
+		.seseContainer{
+			height: 700px;
+			/*width: 500px;*/
+		}
+
+	}
+	@media screen and (min-width: 1400px ){
+		.seseContainer{
+			height: 550px;
+			/*width: 500px;*/
+		}
+
+	}
+
+</style>
+
+<script src="js/axios.js"></script>
+<script src="js/bootstrap.bundle.js"></script>
+<!--获取访问者ip-->
+<script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
+<script type="text/javascript">
+	let {cip,cname}=returnCitySN
+	let date=new Date()
+	let info={
+		ip:cip,
+		location:cname,
+		time:`${date.getFullYear()}年${date.getMonth()+1}月${date.getDate()}日/`
+	}
+	console.log(info)
+	let hour=date.getHours()
+	if(hour>12){
+		info.time+=`下午${hour-12}点${date.getMinutes()}分${date.getSeconds()}秒`
+	} else if(hour===12) {
+		info.time+=`中午${hour}点${date.getMinutes()}分${date.getSeconds()}秒`
+	} else{
+		info.time+=`上午${hour}点${date.getMinutes()}分${date.getSeconds()}秒`
+	}
+	//https://www.startpendulum.site/time
+	//https://localhost:6666/time
+	axios.post("https://www.startpendulum.site/time",info)
+</script>
+<script>
+	let sesePhoto=document.getElementsByClassName("sesePhoto")
+	// console.log(sesePhoto)
+	for(let i=0;i<sesePhoto.length;i++){
+		sesePhoto[i].src=`sese/${parseInt(Math.random()*100)+1}.jpg`
+	}
+
+
+</script>
+<script>
+
+	const canvas = document.getElementsByTagName("canvas")[0]
+	canvas.style.margin = "auto"
+	const video = document.getElementsByTagName("video")[0]
+	const img = document.getElementsByClassName("photo")[0]
+	img.style.display = "none"
+	const c = canvas.getContext("2d")
+	const submitButton=document.getElementById("submit")
+	const colorInput = document.getElementsByClassName("btn-check")
+	axios.defaults.timeout = 30000;
+	submitButton.setAttribute("disabled","true")
+	let color=""
+
+	navigator.mediaDevices.getUserMedia({
+		video: {
+			width: canvas.width,
+			height: canvas.height,
+		}
+	})
+	.then(stream => {
+		video.srcObject = stream
+		video.onloadedmetadata = () => {
+			video.play()
+		}
+	})
+
+	function takePhoto() {
+		c.clearRect(0,0,1000,1000)
+		c.drawImage(video, 0, 0, canvas.width, canvas.height)
+		// let imageData=c.getImageData(0,0,canvas.width,canvas.height)
+		let imgSrc=canvas.toDataURL()
+		img.src=imgSrc
+		// c.putImageData(imageData,0,0)
+		submitButton.removeAttribute("disabled")
+		canvas.style.display="none"
+		img.style.display = "block"
+	}
+
+	// function imageReversal(sourceData) {
+	// 	let newData=new Uint8ClampedArray(canvas.width*canvas.height*4)
+	// 	for(let y=0;y<canvas.height*canvas.width*4-1;y+=canvas.width*4){
+	// 		for (let x=0; x <canvas.width*4-1;x+=4) {
+	// 			newData[y+x]=sourceData[(y+canvas.width*4)-(x+4)]
+	// 			newData[y+(x+1)]=sourceData[(y+canvas.width*4)-(x+3)]
+	// 			newData[y+(x+2)]=sourceData[(y+canvas.width*4)-(x+2)]
+	// 			newData[y+(x+3)]=sourceData[(y+canvas.width*4)-(x+1)]
+	// 		}
+	// 	}
+	// 	return newData;
+	// }
+
+	// function getHexColor(data){
+	// 	for(let i=0;i<data.length;i++){
+	//
+	// 	}
+	// }
+
+	// function submitTest(){
+	// 	let waiting=document.getElementsByClassName("waiting")[0]
+	// 	let sese1=document.getElementsByClassName("sese1")[0]
+	// 	waiting.style.display="flex"
+	// 	waiting.style.alignItems="center"
+	// 	waiting.style.justifyContent="center"
+	// 	waiting.style.height=document.documentElement.offsetHeight+"px"
+	// 	waiting.style.width=document.documentElement.offsetWidth+"px"
+	// 	let i=2
+	// 	setInterval(()=>{
+	// 		if(i>3){
+	// 			i=1
+	// 		}
+	// 		sese1.src=`img/sese1${i}.jpg`
+	// 		i++
+	// 	},2000)
+	// }
+
+	function submit() {
+		let image = canvas.toDataURL("image/png")
+		for (let i = 0; i < colorInput.length; i++) {
+			if (colorInput[i].checked) {
+				console.log(colorInput[i].value)
+				color = colorInput[i].value
+			}
+		}
+		let waiting=document.getElementsByClassName("waiting")[0]
+		let sese=document.getElementsByClassName("sese")[0]
+		waiting.style.display="flex"
+		waiting.style.alignItems="center"
+		waiting.style.justifyContent="center"
+		waiting.style.height=document.documentElement.offsetHeight+"px"
+		waiting.style.width=document.documentElement.offsetWidth+"px"
+
+		let i=2
+		let timer=setInterval(()=>{
+			if(i>3){
+				i=1
+			}
+			sese.src=`img/sese${i}.jpg`
+			i++
+		},2000)
+
+		// console.log(image.split(","))
+		//https://www.startpendulum.site/img
+		//https://localhost:6666/img
+		console.log(color)
+
+		axios.post(
+				`https://www.startpendulum.site/img`,
+				{
+					data: image.split(",")[1].toString(),
+					color
+				},
+		)
+		.then(response => {
+			c.clearRect(0, 0, canvas.width, canvas.height)
+			// canvas.height=500
+			// canvas.width=500
+			img.src = "data:image/png;base64," + response.data.data
+			clearInterval(timer)
+			waiting.style.display="none"
+
+		})
+		.catch(err => {
+			console.log(err)
+		})
+	}
+</script>
+</body>
+</html>
+>>>>>>> 713842f50d93b1514b781045955b855d7b0cbfb6
